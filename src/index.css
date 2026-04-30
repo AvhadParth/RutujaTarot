@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Montserrat, sans-serif;
+  background: #09030f;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(143, 121, 201, 0.12), transparent 22%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.14), transparent 18%),
+    linear-gradient(180deg, #09030f 0%, #12091d 32%, #1A0F2E 72%, #09030f 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #fff8e3;
+}
+
+@layer components {
+  .section-shell {
+    @apply relative mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-anchor {
+    @apply scroll-mt-28 sm:scroll-mt-32;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-glass backdrop-blur-2xl shadow-glass;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center gap-2 rounded-full border border-cosmic-gold/25 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-cosmic-softGold;
+  }
+
+  .section-heading {
+    @apply font-heading text-4xl leading-tight text-white sm:text-5xl lg:text-6xl;
+  }
+
+  .section-copy {
+    @apply text-sm leading-7 text-white/70 sm:text-base;
+  }
+
+  .gold-outline {
+    box-shadow:
+      0 0 0 1px rgba(212, 175, 55, 0.24),
+      0 0 20px rgba(212, 175, 55, 0.14);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade {
+    mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+}
