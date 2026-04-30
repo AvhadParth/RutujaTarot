@@ -11,8 +11,8 @@ function HeroSection() {
 
   const handleMouseMove = (event) => {
     const { innerWidth, innerHeight } = window;
-    const x = (event.clientX / innerWidth - 0.5) * 22;
-    const y = (event.clientY / innerHeight - 0.5) * 22;
+    const x = (event.clientX / innerWidth - 0.5) * 14;
+    const y = (event.clientY / innerHeight - 0.5) * 14;
     setParallax({ x, y });
   };
 
