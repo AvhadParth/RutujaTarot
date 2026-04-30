@@ -42,11 +42,12 @@ function AboutSection() {
                   {item.symbol}
                 </span>
               ))}
-              <div className="relative z-10 overflow-hidden rounded-[2rem] border border-white/10 bg-black/25">
+              <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10 bg-black/25">
                 <img
-                  src="/rutuja-portrait.svg"
-                  alt="Stylized portrait illustration of tarot reader Rutuja Andhale"
-                  className="w-full"
+                  src="/rutuja-portrait.jpeg"
+                  alt="Portrait of tarot reader Rutuja Andhale holding tarot cards"
+                  className="h-full w-full object-cover object-center"
+                  loading="lazy"
                 />
               </div>
             </div>
